@@ -1,22 +1,5 @@
 <template>
   <div class="hello">
-    <div v-if="welcomeMenu" class="welcome-wr">
-      <div class="welcome">
-        <div class="w-title">
-          WELCOME
-        </div>
-        <div class="w-subtitle">
-          Please fill out this form to help us serve you better.
-        </div>
-
-        <div class="container">
-          <button @click="proceed" class="welcome-btn">
-            Continue
-          </button>
-        </div>
-      </div>
-    </div>
-
     <div v-if="thankyouMenu == true" class="welcome-wr">
       <div class="welcome">
         <div class="w-title">
@@ -40,15 +23,18 @@
           <div class="d-title">{{ dataMenuTitle }}</div>
           <div @click="addData(data)" v-for="(data, i) in info" :key="i" class="d-item">{{ data }}</div>
         </div>
-        <!-- <div class="button-wr">
+        <div class="button-wr">
           <button @click="cantFind" class="notfound">
-            Cannot find mine
+            Cancel
           </button>
-        </div>-->
+        </div>
       </div>
     </div>
 
     <div class="content">
+      <div class="container">
+        <img class="logo" src="../assets/g3157.png" alt="">
+      </div>
       <div class="container">
         <div class="h-title">Eagle Lights</div>
       </div>
@@ -61,14 +47,14 @@
           <input v-model="name" type="text" placeholder="Eagle" class="h-input" />
         </div>
 
-        <div class="label">Email</div>
-        <div class="input-wr">
-          <input v-model="email" type="text" placeholder="eagle@gmail.com" class="h-input" />
-        </div>
-
         <div class="label">Phone Number</div>
         <div class="input-wr">
           <input v-model="number" type="text" placeholder="254757690940" class="h-input" />
+        </div>
+
+        <div class="label">Email</div>
+        <div class="input-wr">
+          <input v-model="email" type="text" placeholder="eagle@gmail.com" class="h-input" />
         </div>
 
         <div class="label">Car Make</div>
@@ -90,8 +76,8 @@
           </div>
         </div>
 
-        <div class="label">Car Model</div>
-        <div @click="menus('model')" class="container">
+        <div v-if="models.length > 0" class="label">Car Model</div>
+        <div v-if="models.length > 0" @click="menus('model')" class="container">
           <div class="cardata">
             {{ model }}
             <svg
@@ -219,6 +205,14 @@ export default {
         case "Car Make":
           this.make = content;
           this.dataMenu = false;
+
+          axios.get(`https://peaceful-beyond-71732.herokuapp.com/pickModels?make=${content}`)
+          .then((res) => {
+            this.models = res.data
+          })
+          .catch((e) => {
+            console.log(e)
+          })
           break;
 
         case "Year of Manufacture":
@@ -272,7 +266,7 @@ export default {
           break;
 
         case "year":
-          for (let i = 1990; i < 2020; i++) {
+          for (let i = 1990; i < 2022; i++) {
             this.years.push(i);
           }
           this.info = this.years;
