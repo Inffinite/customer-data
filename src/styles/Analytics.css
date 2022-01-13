@@ -1,7 +1,7 @@
 @import './fonts.css';
 
 @media only screen {
-    /* .analytics {
+    .analytics {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -15,6 +15,44 @@
         text-align: start;
         color: #e45f26;
         font-family: 'sfb';
-        font-size: 20px;
-    } */
+        font-size: 23px;
+    }
+
+    .n-subtitle {
+        color: #e45f26;
+        font-family: 'sfr';
+        text-align: start;
+        margin-top: 20px;
+    }
+
+    .table {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'sfb';
+        font-size: 14px;
+        color: #e45f26;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        border-bottom: 2px solid #1411480c;
+    }
+
+    .ndata {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'sfr';
+        font-size: 18px;
+        color: #141148;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        border-bottom: 2px solid #1411480c;
+    }
+
+    .ntab {
+        margin-top: 20px;
+        background-color: white;
+        border-radius: 4px;
+        padding: 15px;
+    }
 }
