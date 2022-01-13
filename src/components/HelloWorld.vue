@@ -90,7 +90,7 @@
         <div class="label">Phone Number</div>
         <div class="input-wr">
           <input
-            v-model="number"
+            v-model="phone"
             type="text"
             placeholder="254757690940"
             class="h-input"
@@ -290,7 +290,7 @@ export default {
       fname: "",
       lname: "",
       email: "",
-      number: "",
+      phone: "",
       make: "",
       model: "",
       year: "",
