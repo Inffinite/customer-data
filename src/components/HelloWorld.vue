@@ -24,6 +24,9 @@
 
     <div v-if="dataMenu" class="datamenu-wr">
       <div class="menu-content">
+        <div class="button-wr">
+          <button @click="cantFind" class="notfound">Can't find mine</button>
+        </div>
         <div class="datamenu">
           <div class="d-title">
             {{ dataMenuTitle }}
@@ -49,9 +52,6 @@
           >
             {{ data }}
           </div>
-        </div>
-        <div class="button-wr">
-          <button @click="cantFind" class="notfound">Can't find mine</button>
         </div>
       </div>
     </div>
