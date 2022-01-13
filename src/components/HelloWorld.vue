@@ -105,6 +105,8 @@
           </div>
         </div>
 
+        //
+
         <div class="label">Year of Manufacture</div>
         <div @click="menus('year')" class="container">
           <div class="cardata">
