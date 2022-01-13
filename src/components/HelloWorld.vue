@@ -20,14 +20,17 @@
     <div v-if="dataMenu" class="datamenu-wr">
       <div class="menu-content">
         <div class="datamenu">
-          <div class="d-title">{{ dataMenuTitle }}</div>
+          <div class="d-title">
+            {{ dataMenuTitle }}
+          <svg @click="cantFind" class="closeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 0 1 1.414 0L10 8.586l4.293-4.293a1 1 0 1 1 1.414 1.414L11.414 10l4.293 4.293a1 1 0 0 1-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 0 1-1.414-1.414L8.586 10 4.293 5.707a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
+          </div>
           <div @click="addData(data)" v-for="(data, i) in info" :key="i" class="d-item">{{ data }}</div>
         </div>
-        <div class="button-wr">
-          <button @click="cantFind" class="notfound">
+        <!-- <div class="button-wr">
+          <button  class="notfound">
             Cancel
           </button>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -42,9 +45,14 @@
       <div class="h-subtitle">Vehicle information</div>
 
       <div class="data">
-        <div class="label">Your Name</div>
+        <div class="label">First Name</div>
         <div class="input-wr">
-          <input v-model="name" type="text" placeholder="Eagle" class="h-input" />
+          <input v-model="fname" type="text" placeholder="Stephen" class="h-input" />
+        </div>
+
+        <div class="label">Second Name</div>
+        <div class="input-wr">
+          <input v-model="lname" type="text" placeholder="Lin" class="h-input" />
         </div>
 
         <div class="label">Phone Number</div>
@@ -60,7 +68,8 @@
         <div class="label">Car Make</div>
         <div @click="menus('make')" class="container">
           <div class="cardata">
-            {{ make }}
+            <div v-if="make.length > 0">{{ make }}</div>
+            <div v-if="make.length == 0"></div>
             <svg
               class="down-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +88,8 @@
         <div v-if="models.length > 0" class="label">Car Model</div>
         <div v-if="models.length > 0" @click="menus('model')" class="container">
           <div class="cardata">
-            {{ model }}
+            <div v-if="model.length > 0">{{ model }}</div>
+            <div v-if="model.length == 0"></div>
             <svg
               class="down-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +108,8 @@
         <div class="label">Year of Manufacture</div>
         <div @click="menus('year')" class="container">
           <div class="cardata">
-            {{ year }}
+            <div v-if="year">{{ year }}</div>
+            <div v-if="year.length == 0"></div>
             <svg
               class="down-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -135,12 +146,13 @@ export default {
       sendText: 'Save',
       dataMenuTitle: "",
       dataMenu: false,
-      name: "",
+      fname: "",
+      lname: "",
       email: "",
       number: "",
-      make: "Lexus",
-      model: "200SX",
-      year: "2010",
+      make: "",
+      model: "",
+      year: "",
       makes: [
         "Honda", 
         "Isuzu", 
@@ -232,7 +244,8 @@ export default {
           make: this.make,
           model: this.model,
           year: this.year,
-          username: this.name,
+          fname: this.fname,
+          lname: this.lname,
           phone: this.phone,
           email: this.email,
           documented: true
