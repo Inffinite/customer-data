@@ -591,7 +591,7 @@
     .datamenu {
         position: fixed;
         top: 20px;
-        bottom: 80px;
+        bottom: 280px;
         left: 230px;
         right: 230px;
         overflow-y: scroll;
@@ -624,7 +624,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        bottom: 20px;
+        bottom: 220px;
         right: 230px;
         left: 230px;
         background-color: transparent;

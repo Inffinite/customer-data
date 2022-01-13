@@ -2,17 +2,22 @@
   <div class="hello">
     <div v-if="thankyouMenu == true" class="welcome-wr">
       <div class="welcome">
-        <div class="w-title">
-          Thank You
-        </div>
-        <div class="w-subtitle">
-          We appreciate it.
-        </div>
+        <div class="w-title">Thank You</div>
+        <div class="w-subtitle">We appreciate it.</div>
 
         <div class="container">
-          <button @click="go" class="welcome-btn">
-            Perfect
-          </button>
+          <button @click="go" class="welcome-btn">Perfect</button>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="cant == true" class="welcome-wr">
+      <div class="welcome">
+        <div class="w-title">Hello</div>
+        <div class="w-subtitle">Please key in your car details since it is not our list.</div>
+
+        <div class="container">
+          <button @click="cantRemove" class="welcome-btn">Okay</button>
         </div>
       </div>
     </div>
@@ -22,21 +27,38 @@
         <div class="datamenu">
           <div class="d-title">
             {{ dataMenuTitle }}
-          <svg @click="cantFind" class="closeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 0 1 1.414 0L10 8.586l4.293-4.293a1 1 0 1 1 1.414 1.414L11.414 10l4.293 4.293a1 1 0 0 1-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 0 1-1.414-1.414L8.586 10 4.293 5.707a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
+            <svg
+              @click="cantFind"
+              class="closeIcon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 0 1 1.414 0L10 8.586l4.293-4.293a1 1 0 1 1 1.414 1.414L11.414 10l4.293 4.293a1 1 0 0 1-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 0 1-1.414-1.414L8.586 10 4.293 5.707a1 1 0 0 1 0-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
           </div>
-          <div @click="addData(data)" v-for="(data, i) in info" :key="i" class="d-item">{{ data }}</div>
+          <div
+            @click="addData(data)"
+            v-for="(data, i) in info"
+            :key="i"
+            class="d-item"
+          >
+            {{ data }}
+          </div>
         </div>
-        <!-- <div class="button-wr">
-          <button  class="notfound">
-            Cancel
-          </button>
-        </div> -->
+        <div class="button-wr">
+          <button @click="cantFind" class="notfound">Can't find mine</button>
+        </div>
       </div>
     </div>
 
-    <div class="content">
+    <div v-if="documented == true" class="content">
       <div class="container">
-        <img class="logo" src="../assets/g3157.png" alt="">
+        <img class="logo" src="../assets/g3157.png" alt="" />
       </div>
       <div class="container">
         <div class="h-title">Eagle Lights</div>
@@ -47,22 +69,42 @@
       <div class="data">
         <div class="label">First Name</div>
         <div class="input-wr">
-          <input v-model="fname" type="text" placeholder="Stephen" class="h-input" />
+          <input
+            v-model="fname"
+            type="text"
+            placeholder="Stephen"
+            class="h-input"
+          />
         </div>
 
         <div class="label">Second Name</div>
         <div class="input-wr">
-          <input v-model="lname" type="text" placeholder="Lin" class="h-input" />
+          <input
+            v-model="lname"
+            type="text"
+            placeholder="Lin"
+            class="h-input"
+          />
         </div>
 
         <div class="label">Phone Number</div>
         <div class="input-wr">
-          <input v-model="number" type="text" placeholder="254757690940" class="h-input" />
+          <input
+            v-model="number"
+            type="text"
+            placeholder="254757690940"
+            class="h-input"
+          />
         </div>
 
         <div class="label">Email</div>
         <div class="input-wr">
-          <input v-model="email" type="text" placeholder="eagle@gmail.com" class="h-input" />
+          <input
+            v-model="email"
+            type="text"
+            placeholder="eagle@gmail.com"
+            class="h-input"
+          />
         </div>
 
         <div class="label">Car Make</div>
@@ -130,6 +172,103 @@
         </div>
       </div>
     </div>
+
+    <div v-if="documented == false" class="content">
+      <div class="container">
+        <img class="logo" src="../assets/g3157.png" alt="" />
+      </div>
+      <div class="container">
+        <div class="h-title">Eagle Lights</div>
+      </div>
+
+      <div class="h-subtitle">Vehicle information</div>
+
+      <div class="data">
+        <div class="label">First Name</div>
+        <div class="input-wr">
+          <input
+            v-model="fname"
+            type="text"
+            placeholder="Stephen"
+            class="h-input"
+          />
+        </div>
+
+        <div class="label">Second Name</div>
+        <div class="input-wr">
+          <input
+            v-model="lname"
+            type="text"
+            placeholder="Lin"
+            class="h-input"
+          />
+        </div>
+
+        <div class="label">Phone Number</div>
+        <div class="input-wr">
+          <input
+            v-model="number"
+            type="text"
+            placeholder="254757690940"
+            class="h-input"
+          />
+        </div>
+
+        <div class="label">Email</div>
+        <div class="input-wr">
+          <input
+            v-model="email"
+            type="text"
+            placeholder="eagle@gmail.com"
+            class="h-input"
+          />
+        </div>
+
+        <div class="label">Car Make</div>
+        <div class="input-wr">
+          <input
+            v-model="make"
+            type="text"
+            placeholder="Mercedes"
+            class="h-input"
+          />
+        </div>
+
+        <div class="label">Car Model</div>
+        <div class="input-wr">
+          <input
+            v-model="model"
+            type="text"
+            placeholder="EQS"
+            class="h-input"
+          />
+        </div>
+
+        <div class="label">Year of Manufacture</div>
+        <div @click="menus('year')" class="container">
+          <div class="cardata">
+            <div v-if="year">{{ year }}</div>
+            <div v-if="year.length == 0"></div>
+            <svg
+              class="down-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="container">
+          <button @click="saveData" class="send">{{ sendText }}</button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -140,10 +279,12 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      thankyouMenu: false, 
+      cant: false,
+      documented: true,
+      thankyouMenu: false,
       welcomeMenu: true,
       sendLoading: false,
-      sendText: 'Save',
+      sendText: "Save",
       dataMenuTitle: "",
       dataMenu: false,
       fname: "",
@@ -154,39 +295,39 @@ export default {
       model: "",
       year: "",
       makes: [
-        "Honda", 
-        "Isuzu", 
-        "Lexus", 
-        "Mazda", 
+        "Honda",
+        "Isuzu",
+        "Lexus",
+        "Mazda",
         "Mitsubishi",
         "Nissan",
         "Subaru",
         "Suzuki",
-        "Toyota"
+        "Toyota",
       ],
       models: [],
       years: [],
       cars: [],
-      info: []
+      info: [],
     };
   },
 
   async beforeCreate() {
     await axios
       .get("https://peaceful-beyond-71732.herokuapp.com/cars")
-      .then(async res => {
+      .then(async (res) => {
         this.cars = res.data;
 
         await axios
           .get("https://peaceful-beyond-71732.herokuapp.com/getStats")
-          .then(res => {
+          .then((res) => {
             this.models = res.data.models;
           })
-          .catch(e => {
+          .catch((e) => {
             console.log(e);
           });
       })
-      .catch(e => {
+      .catch((e) => {
         console.log(e);
       });
   },
@@ -194,17 +335,19 @@ export default {
   async mounted() {},
 
   methods: {
-    proceed(){
-      this.welcomeMenu = false
+    proceed() {
+      this.welcomeMenu = false;
     },
 
     cantFind() {
+      this.cant = true
+      this.documented = false;
       this.dataMenu = false;
       this.dataMenuTitle = "";
     },
 
-    go(){
-      this.thankyouMenu = false
+    go() {
+      this.thankyouMenu = false;
     },
 
     async addData(content) {
@@ -218,13 +361,16 @@ export default {
           this.make = content;
           this.dataMenu = false;
 
-          axios.get(`https://peaceful-beyond-71732.herokuapp.com/pickModels?make=${content}`)
-          .then((res) => {
-            this.models = res.data
-          })
-          .catch((e) => {
-            console.log(e)
-          })
+          axios
+            .get(
+              `https://peaceful-beyond-71732.herokuapp.com/pickModels?make=${content}`
+            )
+            .then((res) => {
+              this.models = res.data;
+            })
+            .catch((e) => {
+              console.log(e);
+            });
           break;
 
         case "Year of Manufacture":
@@ -238,27 +384,55 @@ export default {
     },
 
     async saveData() {
-      this.sendText = 'Loading'
-      axios
-        .post("https://peaceful-beyond-71732.herokuapp.com/addChosenCar", {
-          make: this.make,
-          model: this.model,
-          year: this.year,
-          fname: this.fname,
-          lname: this.lname,
-          phone: this.phone,
-          email: this.email,
-          documented: true
-        })
-        .then(() => {
-          this.sendText = "Save"
-          this.welcomeMenu = false
-          this.thankyouMenu = true
-        })
-        .catch(e => {
-          this.sendText = "Save"
-          console.log(e)
-        });
+      if (this.documented == true) {
+        this.sendText = "Loading";
+        axios
+          .post("https://peaceful-beyond-71732.herokuapp.com/addChosenCar", {
+            make: this.make,
+            model: this.model,
+            year: this.year,
+            fname: this.fname,
+            lname: this.lname,
+            phone: this.phone,
+            email: this.email,
+            documented: true,
+          })
+          .then(() => {
+            this.sendText = "Save";
+            this.welcomeMenu = false;
+            this.thankyouMenu = true;
+          })
+          .catch((e) => {
+            this.sendText = "Save";
+            console.log(e);
+          });
+      } else {
+        this.sendText = "Loading";
+        axios
+          .post("https://peaceful-beyond-71732.herokuapp.com/addChosenCar", {
+            make: this.make,
+            model: this.model,
+            year: this.year,
+            fname: this.fname,
+            lname: this.lname,
+            phone: this.phone,
+            email: this.email,
+            documented: false,
+          })
+          .then(() => {
+            this.sendText = "Save";
+            this.welcomeMenu = false;
+            this.thankyouMenu = true;
+          })
+          .catch((e) => {
+            this.sendText = "Save";
+            console.log(e);
+          });
+      }
+    },
+
+    cantRemove(){
+      this.cant = false
     },
 
     async menus(n) {
@@ -290,8 +464,8 @@ export default {
         default:
           break;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
