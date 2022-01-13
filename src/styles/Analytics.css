@@ -1,7 +1,7 @@
 @import './fonts.css';
 
 @media only screen {
-    .analytics {
+    /* .analytics {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -16,5 +16,5 @@
         color: #e45f26;
         font-family: 'sfb';
         font-size: 20px;
-    }
+    } */
 }

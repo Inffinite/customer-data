@@ -31,7 +31,7 @@
           <div class="d-title">
             {{ dataMenuTitle }}
             <svg
-              @click="cantFind"
+              @click="closeMenu"
               class="closeIcon"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -146,9 +146,6 @@
             </svg>
           </div>
         </div>
-
-        //
-
         <div class="label">Year of Manufacture</div>
         <div @click="menus('year')" class="container">
           <div class="cardata">
@@ -344,6 +341,11 @@ export default {
     cantFind() {
       this.cant = true
       this.documented = false;
+      this.dataMenu = false;
+      this.dataMenuTitle = "";
+    },
+
+    closeMenu(){
       this.dataMenu = false;
       this.dataMenuTitle = "";
     },
