@@ -57,7 +57,7 @@
     </div>
 
     <div v-if="documented == true" class="content">
-      <div class="container">
+      <div @click="analyze" class="container">
         <img class="logo" src="../assets/g3157.png" alt="" />
       </div>
       <div class="container">
@@ -173,7 +173,7 @@
     </div>
 
     <div v-if="documented == false" class="content">
-      <div class="container">
+      <div @click="analyze" class="container">
         <img class="logo" src="../assets/g3157.png" alt="" />
       </div>
       <div class="container">
@@ -437,6 +437,10 @@ export default {
 
     cantRemove(){
       this.cant = false
+    },
+
+    analyze(){
+      this.$router.push({ name: 'Analytics' })
     },
 
     async menus(n) {
