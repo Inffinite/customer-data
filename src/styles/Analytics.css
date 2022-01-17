@@ -8,11 +8,43 @@
         left: 0;
         right: 0;
         overflow-y: scroll;
-        background-color: #141148;
+        background-color: white;
+    }
+
+    .make-pill-wr {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        background-color: transparent;
+        margin-top: 40px;
+    }
+
+    .make-pill {
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        padding: 10px 20px 10px 20px;
+        font-family: 'sfb';
+        font-size: 16px;
+        cursor: pointer;
+        color: #1f1c5a;
+        transition: 0.5s ease-in-out;
+    }
+
+    .make-pill:hover {
+        background-color: #1f1c5a;
+        color: white;
+    }
+
+
+    .chart-wr {
+        margin-top: 30px;
     }
 
     .ntitle {
-        text-align: start;
+        text-align: center;
         color: #e45f26;
         font-family: 'sfb';
         font-size: 23px;
@@ -56,3 +88,79 @@
         padding: 15px;
     }
 }
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+    .chart-wr-wr {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .make-pill-wr {
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        background-color: transparent;
+        margin-top: 40px;
+    }
+
+    .make-pill {
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        padding: 10px 20px 10px 20px;
+        font-family: 'sfb';
+        font-size: 16px;
+        cursor: pointer;
+        color: #1f1c5a;
+        transition: 0.5s ease-in-out;
+    }
+
+    .make-pill:hover {
+        background-color: #1f1c5a;
+        color: white;
+    }
+
+    .ntitle {
+        text-align: center;
+        color: #e45f26;
+        font-family: 'sfb';
+        font-size: 25px;
+    }
+
+    .chart-wr {
+        margin-top: 30px;
+        position: relative;
+        width: 500px;
+    }
+
+    /* .canvas {
+        
+    } */
+
+    .chartjs-render-monitor {
+        height: 200px;
+        width: auto;
+    }
+}
+/* 
+:root {
+    "#008080",
+    "#181818",
+    "#e6e632",
+    "#a01fa0",
+    "#3d3daf",
+    "#c02929",
+    "#e78645",
+    "#ee34a0",
+    "#3fb8b2",
+    "#a5ce5a",
+    "#023602",
+    "#0e063d",
+    "#535201",
+    "#912b03",
+} */

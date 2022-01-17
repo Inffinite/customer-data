@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Analytics from '../components/Analytics'
+//import Analytics from '../components/Analytics'
+import Models from '../components/Models'
+import Makeo from '../components/Makeo'
 
 Vue.use(VueRouter)
 
@@ -12,10 +14,16 @@ const routes = [
     component: Home
   },
   {
-    path: '/analytics',
-    name: 'Analytics',
-    // route level code-sp
-    component: Analytics
+    path: '/modelo',
+    name: 'Models',
+    component: Models,
+    props: true
+  },
+  {
+    path: '/makeo',
+    name: 'Makeo',
+    component: Makeo,
+    props: true
   }
 ]
 

@@ -11,6 +11,85 @@
         overflow-y: scroll;
     }
 
+    .never {
+        font-size: 14px;
+        font-family: 'sfr';
+        color: #e45f26;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .passme-wr {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #141148a4;
+    }
+
+    .passme {
+        border-radius: 6px;
+        background-color: white;
+        padding: 20px;
+        width: 100%;
+        margin: 20px;
+    }
+    
+    .pass-title {
+        text-align: start;
+        font-family: 'sfb';
+        font-size: 20px;
+        color: #e45f26;
+    }
+
+    .pass-subtitle {
+        text-align: srart;
+        margin-top: 4px;
+        font-family: 'sfr';
+        color: #e45f26;
+        font-size: 14px;
+    }
+
+    .p-input-wr {
+        border-radius: 6px;
+        padding: 15px;
+        background-color: #f0f0f0;
+        color: white;
+        font-family: 'sfr';
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .p-input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        font-size: 18px;
+        color: #e45f26;
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .p-send {
+        outline: none;
+        border: none;
+        width: 100%;
+        background-color: #e45f26;
+        padding: 12px 0px 12px 0px;
+        color: white;
+        font-family: 'sfb';
+        border-radius: 6px;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
     .logo {
         margin-top: 30px;
         height: 50px;
@@ -486,6 +565,63 @@
         left: 0;
         background-color: #141148;
         overflow-y: scroll;
+    }
+
+    .passme {
+        border-radius: 6px;
+        background-color: white;
+        padding: 20px;
+        width: 100%;
+        margin: 0px 400px 0px 400px;
+    }
+
+    .pass-title {
+        text-align: start;
+        font-family: 'sfb';
+        font-size: 24px;
+        color: #e45f26;
+    }
+
+    .pass-subtitle {
+        text-align: srart;
+        margin-top: 6px;
+        font-family: 'sfr';
+        color: #e45f26;
+        font-size: 16px;
+    }
+
+    .p-input-wr {
+        border-radius: 6px;
+        padding: 15px;
+        background-color: #f0f0f0;
+        color: white;
+        font-family: 'sfr';
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .p-input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        font-size: 20px;
+        color: #e45f26;
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .p-send {
+        outline: none;
+        border: none;
+        width: 100%;
+        background-color: #e45f26;
+        padding: 12px 0px 12px 0px;
+        color: white;
+        font-family: 'sfb';
+        border-radius: 6px;
+        margin-top: 20px;
+        font-size: 16px;
+        cursor: pointer;
     }
 
     .container {
