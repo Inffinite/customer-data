@@ -9,7 +9,7 @@
         </div>
       </div>
 
-      <div style="margin-top: 40px;">
+      <div style="margin-top: 40px; display: flex; justify-content: center; align-items: center; width: 100%;">
         <div class="make-pill-wr">
           <button @click="back()" class="make-pill">Back</button>
         </div>
