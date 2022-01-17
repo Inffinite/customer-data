@@ -9,10 +9,8 @@
         </div>
       </div>
 
-      <div style="margin-top: 40px; display: flex; justify-content: center; align-items: center; width: 100%;">
-        <div class="make-pill-wr">
-          <button @click="back()" class="make-pill">Back</button>
-        </div>
+      <div class="make-pill-wr-wr">
+        <button @click="back()" class="make-pill">Back</button>
       </div>
     </div>
   </div>
@@ -22,28 +20,28 @@
 import ModelChart from "./ModelChart.vue";
 export default {
   components: {
-    ModelChart,
+    ModelChart
   },
 
   methods: {
     back() {
       this.$router.push({ name: "Makeo" });
-    },
+    }
   },
 
   props: {
     chartdata: {
       type: Object,
-      default: null,
+      default: null
     },
     options: {
       type: Object,
-      default: null,
-    },
-  },
+      default: null
+    }
+  }
 };
 </script>
 
 <style>
-@import '../styles/Analytics.css';
+@import "../styles/Analytics.css";
 </style>

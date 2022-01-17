@@ -11,14 +11,25 @@
         background-color: white;
     }
 
-    .make-pill-wr {
-        display: grid;
-        grid-template-columns: 45% 45%;
-        justify-content: space-between;
+    .make-pill-wr-wr {
+        display: flex;
+        justify-content: center;
         align-items: center;
         gap: 20px;
         background-color: transparent;
         margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .make-pill-wr {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background-color: transparent;
+        margin-top: 40px;
+        margin-bottom: 60px;
     }
 
     .make-pill {

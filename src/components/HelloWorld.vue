@@ -300,14 +300,11 @@
         </div>
       </div>
     </div>
-
-    <Analytics v-if="front == false" />
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import Analytics from "./Analytics.vue";
 
 export default {
   name: "HelloWorld",
@@ -355,10 +352,6 @@ export default {
       cars: [],
       info: [],
     };
-  },
-
-  components: {
-    Analytics,
   },
 
   async beforeCreate() {
