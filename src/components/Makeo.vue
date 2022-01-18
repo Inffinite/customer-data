@@ -85,6 +85,8 @@ export default {
           let carNames = [];
           let carValues = [];
 
+          console.log(res.data)
+
           for (let i = 0; i < res.data.models.length; i++) {
             var name = Object.keys(res.data.models[i]);
             var values = Object.values(res.data.models[i]);
@@ -141,6 +143,7 @@ export default {
                 hoverBackgroundColor: "red",
                 hoverBorderWidth: "10px",
               },
+              make: m
             },
           });
         })

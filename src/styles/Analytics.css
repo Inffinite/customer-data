@@ -11,6 +11,52 @@
         background-color: white;
     }
 
+    section {
+        background-color: white;
+    }
+
+    .users-wr {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 100%; */
+    }
+
+    .user {
+        background-color: rgb(243, 243, 243);
+        padding: 20px 20px 8px 20px;
+        border-radius: 6px;
+        margin-top: 25px;
+        margin: 20px;
+        /* width: 100%; */
+        /* --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); */
+    }
+
+    .usertitle {
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: 'sfb';
+        color: #e45f26;
+        margin-top: 10px;
+    }
+
+    .uservalue {
+        margin-top: 6px;
+        font-family: 'sfr';
+        font-size: 20px;
+        color: #2f2c6b;
+        margin-bottom: 16px;
+    }
+
+    .userlabel {
+        text-align: start;
+        font-family: 'sfb';
+        color: #0e0c3573;
+        font-size: 12px;
+    }
+
     .make-pill-wr-wr {
         display: flex;
         justify-content: center;
@@ -107,6 +153,55 @@
         justify-content: center;
         align-items: center;
         margin-top: 20px;
+    }
+
+    .users-wr {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 100%; */
+    }
+
+    .userstyle {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .user {
+        background-color: rgb(243, 243, 243);
+        padding: 20px 20px 8px 20px;
+        border-radius: 6px;
+        margin-top: 25px;
+        margin: 0px 0px 25px 0px;
+        /* width: 100%; */
+        /* --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); */
+    }
+
+    .usertitle {
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: 'sfb';
+        color: #e45f26;
+    }
+
+    .uservalue {
+        margin-top: 6px;
+        font-family: 'sfr';
+        font-size: 20px;
+        color: #2f2c6b;
+        margin-bottom: 16px;
+    }
+
+    .userlabel {
+        text-align: start;
+        font-family: 'sfb';
+        color: #0e0c3573;
+        font-size: 12px;
     }
 
     .make-pill-wr {
