@@ -26,9 +26,17 @@
           </div>
 
           <div class="make-pill-wr-wr">
-            <button @click="generateReport()" class="make-pill">
+            <!-- <button @click="generateReport()" class="make-pill">
               Download Pdf
-            </button>
+            </button> -->
+
+            <download-csv
+              class="make-pill"
+              :data="cars"
+              name="Details.csv"
+            >
+            Download csv
+            </download-csv>
 
             <div class="make-pill-wr-wr">
               <button @click="back()" class="make-pill">Back</button>
