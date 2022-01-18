@@ -7,7 +7,7 @@
       :enable-download="true"
       :preview-modal="true"
       :paginate-elements-by-height="1400"
-      filename="Details"
+      :filename="make"
       :pdf-quality="2"
       :manual-pagination="false"
       pdf-format="a4"
@@ -33,7 +33,7 @@
             <download-csv
               class="make-pill"
               :data="cars"
-              name="Details.csv"
+              :name="carMake"
             >
             Download csv
             </download-csv>
@@ -81,6 +81,7 @@ export default {
   data() {
     return {
       cars: [],
+      carMake: ''
     };
   },
 
@@ -91,6 +92,7 @@ export default {
       )
       .then((res) => {
         this.cars = res.data;
+        this.carMake = `${this.make}.csv`
       })
       .catch((e) => {
         console.log(e);
